@@ -1,0 +1,12 @@
+{
+  "name": "browsersync",
+  "version": "1.0.0",
+  "description": "BrowserSync service for Docker Compose",
+  "scripts": {
+    "start": "browser-sync start --proxy 'web:80' --files '/app/**/*' --no-open --host 0.0.0.0"
+  },
+  "dependencies": {
+    "browser-sync": "^2.29.0"
+  }
+}
+

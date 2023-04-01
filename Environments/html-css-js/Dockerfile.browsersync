@@ -1,0 +1,12 @@
+FROM node:alpine
+
+WORKDIR /app
+
+COPY package.json .
+COPY browsersync.sh .
+
+RUN npm install -g browser-sync
+RUN chmod +x browsersync.sh
+
+ENTRYPOINT ["/app/browsersync.sh"]
+
