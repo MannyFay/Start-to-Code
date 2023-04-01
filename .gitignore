@@ -1,32 +1,65 @@
-# Prerequisites
-*.d
+#--------------------------------------------
+# --- Laravel
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+/public/build
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+.env
+.env.backup
+.env.production
+Homestead.json
+Homestead.yaml
+auth.json
 
-# Precompiled Headers
-*.gch
-*.pch
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+#--------------------------------------------
+# --- JetBrains IDEs
 
-# Fortran module files
-*.mod
-*.smod
+/.fleet
+/.idea
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
 
-# Executables
-*.exe
-*.out
-*.app
+#--------------------------------------------
+# --- Node.js
+
+/node_modules
+npm-debug.log
+yarn-error.log
+
+
+#--------------------------------------------
+# --- OS Generated Files
+
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.directory
+
+
+#--------------------------------------------
+# --- PHPUnit
+
+/.phpunit.cache
+.phpunit.result.cache
+
+
+#--------------------------------------------
+# --- Microsoft Visual Studio Code
+
+/.vscode
+
+
+#--------------------------------------------
+# --- Vim
+
+.*.swp
+*.swp
+.*.swo
+*.swo
