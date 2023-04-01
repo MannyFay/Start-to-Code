@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  webserver:
+     container_name: php-playground_webserver
+     image: php:8.2-apache
+     volumes:
+       - .:/var/www/html/
+     ports:
+       - "8000:80"
+     networks:
+       - php-playground_network
+
+  browsersync:
+    container_name: php-playground_browsersync
+    build:
+      context: .
+      dockerfile: Dockerfile.browsersync
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - .:/app
+    depends_on:
+      - webserver
+    networks:
+      - php-playground_network
+
+networks:
+  php-playground_network:
