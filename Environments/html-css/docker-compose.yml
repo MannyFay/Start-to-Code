@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  webserver:
+    container_name: html-css-playground_webserver
+    build:
+      context: .
+      dockerfile: Dockerfile.nginx
+    ports:
+      - 8000:80
+    volumes:
+      - .:/usr/share/nginx/html
+    networks:
+      - html-css-playground_network
+
+  browsersync:
+    container_name: html-css-playground_browsersync
+    build:
+      context: .
+      dockerfile: Dockerfile.browsersync
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+    volumes:
+      - .:/app
+    depends_on:
+      - webserver
+    networks:
+      - html-css-playground_network
+
+networks:
+  html-css-playground_network:
+
